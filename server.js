@@ -11,6 +11,8 @@ const resolvers = {
   Mutation,
 };
 const app = express();
+app.get("/", (req, res) => res.json({ version: "v1", status: "healthy" }));
+
 const PORT = 4000;
 
 const server = new ApolloServer({
