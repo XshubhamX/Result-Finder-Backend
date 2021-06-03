@@ -12,7 +12,6 @@ const resolvers = {
 };
 const app = express();
 const PORT = 4000;
-const cors = require("cors");
 
 const server = new ApolloServer({
   typeDefs,
@@ -24,7 +23,6 @@ const server = new ApolloServer({
 server.start();
 
 server.applyMiddleware({ app });
-app.use(cors);
 
 app.listen({ port: PORT });
 console.log(chalk.greenBright(`🚀 Server ready at http://localhost:${PORT}`));
