@@ -25,4 +25,3 @@ server.start();
 server.applyMiddleware({ app });
 
 app.listen({ port: PORT });
-console.log(chalk.greenBright(`🚀 Server ready at http://localhost:${PORT}`));
